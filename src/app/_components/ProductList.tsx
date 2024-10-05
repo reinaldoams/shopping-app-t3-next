@@ -1,7 +1,7 @@
 import React from 'react'
 
 interface props {
-    products: {
+    products?: {
         id: string
         name: string
         price: string
@@ -14,6 +14,7 @@ interface props {
 
 
 function ProductList({products}: props) {
+    if (!products) return <></>
     return (
         <div className="mt-6 lg:mt-0 lg:px-2 lg:w-4/5 ">
             <div className="flex items-center justify-between text-sm tracking-widest uppercase ">
